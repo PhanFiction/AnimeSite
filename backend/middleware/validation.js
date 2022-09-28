@@ -1,7 +1,6 @@
 const validation = async (req, res, next) => {
   const { email, username, password } = req.body;  
-  if(email === null|| email === undefined || email.length < 1) return res.status(400).send({error: "email is not defined"});
-  if(username === null|| username === undefined || username.length < 4 ) return res.status(400).send({error: 'username is not defined'});
+  if(email === null || email === undefined || email.length < 1) return res.status(400).send({error: "email is not defined"});
   if(password === null || password === undefined || password.length < 4) return res.status(400).send({error: 'password is not defined'});
   next();
 };
