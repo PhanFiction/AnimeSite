@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -15,18 +15,18 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: 'babel-loader',
       },
       {
         test: /\.html$/,
-        use: "html-loader"
+        use: 'html-loader',
       },
       {
         test: /\.css$/i,
@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./index.html",
-    })
-  ]
-}
+      template: './index.html',
+    }),
+  ],
+};
