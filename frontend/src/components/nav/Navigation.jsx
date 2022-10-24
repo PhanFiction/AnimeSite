@@ -13,9 +13,24 @@ const StyledButton = styled(Button)`
   background-color: transparent;
   border-color: transparent;
   &&:hover {
-    background-color: grey;
+    background-color: var(--p-light);
     border-color: transparent;
   }
+`;
+
+const StyledNav = styled(Navbar)`
+  background-color: var(--nav-color);
+  a { 
+    color: var(--p-t);
+  }
+  a:hover {
+    color: var(--s-t);
+  }
+`;
+
+const StyledOffCanvas = styled(Offcanvas)`
+  background-color: var(--nav-color);
+  color: var(--p-t);
 `;
 
 class Navigation extends React.Component {
@@ -41,12 +56,12 @@ class Navigation extends React.Component {
   render() {
     const { show } = this.state;
     return (
-      <Navbar bg="light" expand="lg">
+      <StyledNav expand="lg">
         <Container fluid>
           <StyledButton onClick={this.handleShow}>
             <Hamburger />
           </StyledButton>
-          <Offcanvas show={show} onHide={this.handleClose}>
+          <StyledOffCanvas show={show} onHide={this.handleClose}>
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
             </Offcanvas.Header>
@@ -57,7 +72,7 @@ class Navigation extends React.Component {
               <Nav.Link as={Link} to="/subbed-anime">Subbed Anime</Nav.Link>
               <Nav.Link as={Link} to="/dubbed-anime">Dubbed Anime</Nav.Link>
             </Offcanvas.Body>
-          </Offcanvas>
+          </StyledOffCanvas>
           <Navbar.Brand>
             <Nav.Link as={Link} to="/">Anime Site</Nav.Link>
           </Navbar.Brand>
@@ -75,7 +90,7 @@ class Navigation extends React.Component {
             </Nav.Item>
           </Nav>
         </Container>
-      </Navbar>
+      </StyledNav>
     );
   }
 }

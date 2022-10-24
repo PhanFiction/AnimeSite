@@ -7,11 +7,11 @@ const HamburgerDiv = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  width: 35px;
-  height: 10px;
+  width: 2rem;
+  height: 6px;
   border-radius: 10px;
   margin-bottom: 2px;
-  background-color: black;
+  background-color: var(--p-t);
 `;
 
 export default class Hamburger extends React.PureComponent {

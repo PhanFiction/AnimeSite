@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Genre from './components/pages/Genre/Genre';
 import Home from './components/pages/Home/Home';
 import Navigation from './components/nav/Navigation';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 class App extends React.PureComponent {
   render() {
