@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const { Carousel } = require('react-responsive-carousel');
 
@@ -96,14 +97,14 @@ export default class Home extends React.PureComponent {
               <h1>Top Airing</h1>
               <div className="item-container">
                 <img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__480.jpg" className="img" alt="img" />
-                <div className="info-container">
+                <Link to="/anime" className="info-container">
                   <p>Bleach: Thousand-year blood war arc</p>
                   <ul>
                     <li>TV</li>
                     <li>EP 23</li>
                     <li> 23min</li>
                   </ul>
-                </div>
+                </Link>
               </div>
               <div className="item-container">
                 <img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__480.jpg" className="img" alt="img" />
@@ -328,7 +329,7 @@ export default class Home extends React.PureComponent {
         </StyledSection>
         <StyledSection>
           <StyledGridContainer2>
-            <div className="latest">
+            <Link to="anime/:id" className="latest">
               <img src="https://img.zorores.com/_r/300x400/100/be/b8/beb8d3d34708ab455d3b97f979f55011/beb8d3d34708ab455d3b97f979f55011.jpg" alt="img" />
               <div>
                 <p>Peter Grill and the Philosopher's Time: Supe...</p>
@@ -337,7 +338,7 @@ export default class Home extends React.PureComponent {
                   <li>13m</li>
                 </ul>
               </div>
-            </div>
+            </Link>
             <div className="latest">
               <img src="https://img.zorores.com/_r/300x400/100/be/b8/beb8d3d34708ab455d3b97f979f55011/beb8d3d34708ab455d3b97f979f55011.jpg" alt="img" />
               <div>
