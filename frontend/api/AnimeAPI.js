@@ -1,5 +1,4 @@
 const axios = require('axios');
-
 const animeAPI = `${process.JIKAN_API}/anime`;
 
 const getAnimeFullById = async (animeId) => {

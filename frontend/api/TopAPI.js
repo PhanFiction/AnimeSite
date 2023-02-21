@@ -1,5 +1,4 @@
 const axios = require('axios');
-
 const topAPI = `${process.env.JIKAN_API}/top`;
 
 const getTopAnime = async () => {

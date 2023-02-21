@@ -9,10 +9,16 @@ export default class Anime extends React.Component {
   render() {
     return (
       <section>
-        <img src="https://img.zorores.com/_r/300x400/100/b3/da/b3da1326e07269ddd8d73475c5dabf2c/b3da1326e07269ddd8d73475c5dabf2c.jpg" alt="" />
+        <div className="img-container">
+          <img src="https://img.zorores.com/_r/300x400/100/b3/da/b3da1326e07269ddd8d73475c5dabf2c/b3da1326e07269ddd8d73475c5dabf2c.jpg" alt="" />
+        </div>
         <div>
           <h1>Chainsaw Man</h1>
-          <ul><li /></ul>
+          <ul>
+            <li>
+              Insert Placements
+            </li>
+          </ul>
           <div>
             <button> Watch Now </button>
             <button> Add to List </button>
@@ -25,7 +31,6 @@ export default class Anime extends React.Component {
             with whom he slays devils for money that inevitably
             ends up in the yakuza's pockets. All Denji can ...+ More
             {' '}
-
           </p>
         </div>
       </section>

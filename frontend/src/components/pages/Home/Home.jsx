@@ -6,6 +6,7 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 
 const { Carousel } = require('react-responsive-carousel');
+// const TopAPI = require('../../../../api/TopAPI');
 
 const StyledHome = styled.div`
   @media (min-width: 500px) {
@@ -67,6 +68,10 @@ export default class Home extends React.PureComponent {
   constructor() {
     super();
     this.state = {};
+  }
+
+  componentDidMount() {
+    console.log(process.env.REACT_APP_JIKAN_API);
   }
 
   render() {
